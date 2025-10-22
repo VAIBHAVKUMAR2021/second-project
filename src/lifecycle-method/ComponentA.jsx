@@ -1,5 +1,6 @@
 //rcc for making class based component
 import React, { Component } from 'react'
+import ComponentB from './ComponentB'
 
 export default class ComponentA extends Component {
     
@@ -66,7 +67,14 @@ componentDidUpdate(){
  //3.here u can't code for side-effects.
         console.log("ComponentA - render") // i'm rendering outside to the jsx
         return (
-      <div>ComponentA</div>
+
+      <> 
+      <h2>ComponentA</h2>
+      <h3>subject:{this.state.subject} </h3>
+      {this.state.subject == "ReactJS" ? <ComponentB /> : null}
+      <button onClick={()=>this.setState({subject:"NodeJS"})}>change subject</button>
+      </>
+
     )
   }
 }

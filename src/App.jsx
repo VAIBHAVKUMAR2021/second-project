@@ -1,9 +1,19 @@
 import ComponentA from "./lifecycle-method/ComponentA"
+import Product from "./error-boundary/Product"
+import ErrorBoundary from "./error-boundary/ErrorBoundary"
+import SideEffects from "./fetch-data/SideEffects"
 
 const App = () => {
   return (
     <> 
-    <ComponentA />
+    {/* <ComponentA /> */}
+
+    {/* when we add a component inside of oother component it becomes their child so we can acces by the use of this.props.children */}
+    {/* <ErrorBoundary>
+    <Product product="mobile"/>
+    <Product product="laptop"/>
+    </ErrorBoundary> */}
+    <SideEffects />
     </>
   )
 }
