@@ -2,6 +2,7 @@ import ComponentA from "./lifecycle-method/ComponentA"
 import Product from "./error-boundary/Product"
 import ErrorBoundary from "./error-boundary/ErrorBoundary"
 import SideEffects from "./fetch-data/SideEffects"
+import FetchUsers from "./fetch-data/FetchUsers"
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
     <Product product="mobile"/>
     <Product product="laptop"/>
     </ErrorBoundary> */}
-    <SideEffects />
+    {/* <SideEffects /> */}
+    <FetchUsers/>
     </>
   )
 }
