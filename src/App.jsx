@@ -3,6 +3,7 @@ import Product from "./error-boundary/Product"
 import ErrorBoundary from "./error-boundary/ErrorBoundary"
 import SideEffects from "./fetch-data/SideEffects"
 import FetchUsers from "./fetch-data/FetchUsers"
+import ParentComp from "./memoization/ParentComp"
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
     <Product product="laptop"/>
     </ErrorBoundary> */}
     {/* <SideEffects /> */}
-    <FetchUsers/>
+    {/* <FetchUsers/> */}
+    <ParentComp/>
     </>
   )
 }
