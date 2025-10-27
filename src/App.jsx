@@ -4,6 +4,8 @@ import ErrorBoundary from "./error-boundary/ErrorBoundary"
 import SideEffects from "./fetch-data/SideEffects"
 import FetchUsers from "./fetch-data/FetchUsers"
 import ParentComp from "./memoization/ParentComp"
+import MemoComp from "./memoization/MemoComp"
+import ToDoList from "./task/ToDoList"
 
 const App = () => {
   return (
@@ -17,7 +19,9 @@ const App = () => {
     </ErrorBoundary> */}
     {/* <SideEffects /> */}
     {/* <FetchUsers/> */}
-    <ParentComp/>
+    {/* <ParentComp/> */}
+    {/* <MemoComp/> */}
+    <ToDoList/>
     </>
   )
 }

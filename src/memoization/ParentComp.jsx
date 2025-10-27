@@ -13,9 +13,9 @@ let[percent,setPercent] = useState(85);
 
 //when the parentcomp is re-render then the function will also re-render that's why we use {useCallback}..
 
-//useCallback(callbackfunc, array of dependency) is used to memoize a function
+//useCallback(callbackfunc, array of dependency) is used to memoize(stores in memory) a function.
 
-let incrMarks = useCallback(() =>{
+let incrMarks = useCallback(() =>{        
   setMarks(marks + 1)
 },[marks])
 
