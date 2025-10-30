@@ -22,6 +22,15 @@ let handleSubmit =(e) =>{
     }
 }
 
+//list =["task1","task2","task3"]
+//filter() is an array method used to filter out elements based on given condition
+//filter() returns a new array
+let handleDelete =(x) =>{ // x=> index of the task to be deleted,
+  let filteredArray= list.filter((value,index)=> index!= x) //0!=2
+  console.log(filteredArray); //["task1","task2"]
+  setList(filteredArray)
+}
+
   return (
     <>
 <h2>ToDoList</h2>
@@ -32,13 +41,13 @@ let handleSubmit =(e) =>{
 {
     list.map((value,index)=>{                  //for displaying the task on server
         return(<Fragment key={index}>
-      <h3>{value}</h3>
-           <span> <MdDelete /></span>
+           <h3>{value}</h3>
+           <span onClick={() => handleDelete(index)}> <MdDelete /></span>  {/*if we pass the function which return something we have to wrap inside in callback() */}
      </Fragment>)
 
     })
 }
-    </>
+</>
 
     
     
