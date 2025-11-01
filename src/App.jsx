@@ -5,6 +5,7 @@ import About from './About'
 import Contact from './Contact'
 import Setting from './Setting'
 import Notfound from './Notfound'
+import Mobile from './Mobile'
 
 //routing-vv5 => npm i react-router-dom
 const App = () => {
@@ -17,7 +18,9 @@ const App = () => {
      <Routes>
           <Route path='/' element ={<Home/>}/>
            <Route path='/about' element ={<About/>}/>
-           <Route path='/contact' element ={<Contact/>}/>
+           <Route path='/contact' element ={<Contact/>}>
+              <Route path='/contact/mobile' element ={<Mobile/>}/>
+           </Route>
            <Route path='/setting' element ={<Setting/>}/>
            <Route path='*' element ={<Notfound/>}/>
      </Routes>
