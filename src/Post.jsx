@@ -1,8 +1,12 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const Post = () => {
   return (
-    <div>Post</div>
+    <>
+ <h2>POST</h2>
+ <Outlet/>
+    </>
   )
 }
 

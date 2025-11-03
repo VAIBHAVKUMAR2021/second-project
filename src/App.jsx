@@ -3,6 +3,7 @@ import Contact from './Contact'
 import About from './About'
 import Notfound from './Notfound'
 import Post from './Post'
+import PostNumber from './PostNumber'
 import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
 import Mobile from './Mobile'
 
@@ -29,10 +30,16 @@ const App = () => {
             },
             {
                 path : '/post',
-           element : <Post/>
+           element : <Post/>,
+           children : [
+            {
+              path : '/post/:postnum',      //parameter/slug =>/:ParameterName   , it's way to define a dynamic path
+              element : <PostNumber/>   
+            }
+           ]
             },
             {
-                path : '8',
+                path : '*',
            element : <Notfound/>
             },
            ]
